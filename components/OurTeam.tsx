@@ -14,25 +14,25 @@ const teamMembers: TeamMember[] = [
     name: "Shriram Nimbalkar",
     title: "Vice President",
     image: "/PVPs/Shriram.webp",
-    linkedin: "https://www.linkedin.com/in/jane-smith"
+    linkedin: "https://www.linkedin.com/in/shriram-nimbalkar-a411a0240"
   },
   {
     name: "Prajakta Wagh",
     title: "President",
     image: "/PVPs/Prajakta.webp",
-    linkedin: "https://www.linkedin.com/in/john-doe"
+    linkedin: "https://www.linkedin.com/in/prajakta-wagh-0388b3259"
   },
   {
     name: "Shravani Mahajan",
     title: "Vice President of Marketing",
     image: "/PVPs/Shravani Mahajan.webp",
-    linkedin: "https://www.linkedin.com/in/emily-johnson"
+    linkedin: "https://www.linkedin.com/in/shravani-mahajan-1b4b26272"
   }
 ]
 
 export default function MeetOurTeam() {
   return (
-    <section className=" py-12 px-4 sm:px-6 lg:px-8">
+    <section className="py-6 px-4 sm:px-6 lg:px-8">
       <hr />
       <div className="max-w-7xl mx-auto">
       <h2 className="text-4xl font-extrabold text-gray-200 text-center mb-12 mt-7">Meet Our Team</h2>
