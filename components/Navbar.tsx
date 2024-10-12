@@ -24,7 +24,12 @@ const navItems = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false) // Mobile submenu toggle
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false)
+
+  const closeMenu = () => {
+    setIsOpen(false)
+    setIsSubMenuOpen(false)
+  }
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full bg-black shadow-lg">
@@ -32,14 +37,14 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo Section */}
           <div className="flex items-center space-x-3">
-            <Link href="/" className="flex items-center py-3">
+            <Link href="/" className="flex items-center py-3" onClick={closeMenu}>
               <motion.span
                 className="flex items-center justify-center font-semibold text-white text-lg"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Image src={"/logo.webp"} height={60} width={60} alt="logo" />
+                <Image src="/logo.webp" height={60} width={60} alt="logo" />
                 <h1 className="text-[30px] font-light">Team Mesa</h1>
               </motion.span>
             </Link>
@@ -94,7 +99,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center">
             <button className="outline-none mobile-menu-button" onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={24} color="white" /> : <Menu size={24} color="white" />}
             </button>
           </div>
         </div>
@@ -116,9 +121,18 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-900 hover:bg-gray-50"
-                    onClick={() => item.subItems && setIsSubMenuOpen(!isSubMenuOpen)} // Toggle for submenu
+                    onClick={() => {
+                      if (item.subItems) {
+                        setIsSubMenuOpen(!isSubMenuOpen)
+                      } else {
+                        closeMenu()
+                      }
+                    }}
                   >
                     {item.name}
+                    {item.subItems && (
+                      <ChevronDown className="inline-block ml-1" size={16} />
+                    )}
                   </Link>
 
                   {/* Dropdown for "Past Events" in mobile view */}
@@ -134,7 +148,8 @@ export default function Navbar() {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block px-4 py-2 text-gray-100 hover:bg-gray-100"
+                          className="block px-4 py-2 text-gray-100 hover:bg-gray-100 hover:text-gray-900"
+                          onClick={closeMenu}
                         >
                           {subItem.name}
                         </Link>
