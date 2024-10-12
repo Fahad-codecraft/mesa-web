@@ -73,6 +73,7 @@ export default function MeetOurTeam() {
           Know More about Our Team....
         </Link>
       </div>
+      <hr className='mt-4'/>
     </section>
   )
 }

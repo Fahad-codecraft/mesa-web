@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-background text-foreground">
       <hr />
-      <div className="container mx-auto px-4 py-8 md:py-12">
+      <div className="container mx-auto px-4 pt-8 md:pt-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Image src="/logo.webp" alt="Team MESA logo" width={80} height={80} className="mb-4" />
@@ -62,9 +62,9 @@ export default function Footer() {
           </div>
         </div>
         
-        <hr className="my-8 border-border" />
+        <hr className="mt-8 border-border" />
         
-        <p className="text-center text-sm">
+        <p className="text-center text-sm my-3">
           &copy; {new Date().getFullYear()} Team MESA - All Rights Reserved
         </p>
       </div>

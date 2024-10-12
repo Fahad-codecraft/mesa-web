@@ -1,3 +1,4 @@
+import Ex from "@/components/Ex";
 import Footer from "@/components/Footer";
 import MeetOurTeam from "@/components/OurTeam";
 import Slideshow from "@/components/Slideshow";
@@ -9,6 +10,7 @@ export default function Home() {
       <Slideshow />
       <Teachers />
       <MeetOurTeam />
+      <Ex />
       <Footer />
     </div>
   );
