@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <div className='w-full'>
-      {/* <Past22_23 /> */}
-      {/* <Past21_22 /> */}
+      <Past22_23 />
+      <Past21_22 />
       <Past20_21 />
     </div>
   )

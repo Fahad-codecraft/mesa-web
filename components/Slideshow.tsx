@@ -18,7 +18,7 @@ export default function Slideshow() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768)
+      setIsMobile(window.innerWidth <= 1024)
     }
 
     handleResize()
@@ -27,6 +27,7 @@ export default function Slideshow() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  // Preload all images to cache them
   useEffect(() => {
     images.forEach((image) => {
       const img = new window.Image()
@@ -53,7 +54,7 @@ export default function Slideshow() {
   }, [currentIndex, isMobile])
 
   return (
-    <div className={`relative w-screen ${isMobile ? 'max-w-screen-sm max-h-[70vh]' : 'h-screen max-w-full'} mx-auto overflow-hidden`}>
+    <div className={`relative w-screen ${isMobile ? 'max-w-screen max-h-[90vh]' : 'h-screen max-w-full'} mx-auto overflow-hidden`}>
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -73,6 +74,20 @@ export default function Slideshow() {
           />
         </motion.div>
       </AnimatePresence>
+
+      {/* Preload images in the background */}
+      <div className="hidden">
+        {images.map((image, index) => (
+          <Image
+            key={index}
+            src={image.src}
+            alt={image.alt}
+            width={1}
+            height={1}
+            style={{ display: 'none' }}
+          />
+        ))}
+      </div>
 
       <div className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 ${isMobile ? 'space-x-1' : 'space-x-2'}`}>
         {images.map((_, index) => (
