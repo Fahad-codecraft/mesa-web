@@ -25,13 +25,13 @@ const teamDirectors = [
 ]
 
 const socialmedia = [
-  { id: 2, name: 'Parth Lekule', role: 'CTO', image: '/socialmediaimages/Parth Lekule.webp', linkedin: 'https://www.linkedin.com/in/parth-lekule-0494aa229/' },
-  { id: 3, name: 'Tanmay Shah', role: 'Designer', image: '/socialmediaimages/Tanmay Shah.webp', linkedin: 'https://www.linkedin.com/in/tanmay-shah-b14884292/' },
+  { id: 2, name: 'Parth Lekule', role: '', image: '/socialmediaimages/Parth Lekule.webp', linkedin: 'https://www.linkedin.com/in/parth-lekule-0494aa229/' },
+  { id: 3, name: 'Tanmay Shah', role: '', image: '/socialmediaimages/Tanmay Shah.webp', linkedin: 'https://www.linkedin.com/in/tanmay-shah-b14884292/' },
   // { id: 4, name: 'Dashmeet Singh Suri', role: 'Developer', image: '/socialmediaimages/Dashmeet.webp', linkedin: 'https://www.linkedin.com/in/dashmeet-singh-47b550292/' },
   // { id: 5, name: 'Simran Dandge', role: 'Marketing', image: '/socialmediaimages/Simaran.webp', linkedin: '' },
   // { id: 6, name: 'Atharva Lahare', role: 'HR', image: '/socialmediaimages/Atharva Lahare.webp', linkedin: 'https://www.linkedin.com/in/atharvalahare/' },
   // { id: 7, name: 'Harsh Gandhi', role: 'HR', image: '/eventmanagementimages/Harsh Gandhi.webp', linkedin: '' },
-  { id: 8, name: 'Raushan Kumar Jha', role: 'HR', image: '/socialmediaimages/Raushan Kumar Jha.webp', linkedin: 'https://www.linkedin.com/in/raushan-kumar-jha07/' },
+  { id: 8, name: 'Raushan Kumar Jha', role: '', image: '/socialmediaimages/Raushan Kumar Jha.webp', linkedin: 'https://www.linkedin.com/in/raushan-kumar-jha07/' },
   // { id: 9, name: 'Aniket Shinde', role: 'HR', image: '/eventmanagementimages/Aniket Shinde.webp', linkedin: '' },
 ]
 
@@ -40,20 +40,20 @@ const marketing = [
   // { id: 3, name: 'Aditya Patil', role: 'Designer', image: '/marketing/Aditya.webp', linkedin: '' },
   // { id: 4, name: 'Ayog Kewate', role: 'Developer', image: '/marketing/Ayog.webp', linkedin: '' },
   // { id: 5, name: 'Ritika Jadhav', role: 'Marketing', image: '/marketing/Ritika.webp', linkedin: 'https://www.linkedin.com/in/ritika-jadhav-a894ba274/' },
-  { id: 6, name: 'Mayur Dhore', role: 'HR', image: '/marketing/Mayur Dhore.webp', linkedin: '' },
+  { id: 6, name: 'Mayur Dhore', role: '', image: '/marketing/Mayur Dhore.webp', linkedin: '' },
   // { id: 7, name: 'Rushikesh Jagdale', role: 'HR', image: '/marketing/Siddhi Tiwari.webp', linkedin: '' },
-  { id: 8, name: 'Piyush Kharat', role: 'HR', image: '/marketing/Piyush Kharat.webp', linkedin: 'https://www.linkedin.com/in/piyush-kharat-8b8784259/' },
-  { id: 9, name: 'Prasad Gadekar', role: 'HR', image: '/marketing/Prasad Gadekar.webp', linkedin: 'https://www.linkedin.com/in/prasad-gadekar-3a6160253/' },
+  { id: 8, name: 'Piyush Kharat', role: '', image: '/marketing/Piyush Kharat.webp', linkedin: 'https://www.linkedin.com/in/piyush-kharat-8b8784259/' },
+  { id: 9, name: 'Prasad Gadekar', role: '', image: '/marketing/Prasad Gadekar.webp', linkedin: 'https://www.linkedin.com/in/prasad-gadekar-3a6160253/' },
 ]
 
 const eventmanagement = [
 
-  { id: 2, name: 'Sakshi Durugkar', role: 'CTO', image: '/eventmanagement/Sakshi Durugkar.webp', linkedin: 'https://www.linkedin.com/in/sakshi-durugkar-4545b12aa/' },
-  { id: 4, name: 'Sharayu Dange', role: 'Developer', image: '/eventmanagement/Sharayu.webp', linkedin: 'https://www.linkedin.com/in/sharayu-dange-b536472a8/' },
+  { id: 2, name: 'Sakshi Durugkar', role: '', image: '/eventmanagement/Sakshi Durugkar.webp', linkedin: 'https://www.linkedin.com/in/sakshi-durugkar-4545b12aa/' },
+  { id: 4, name: 'Sharayu Dange', role: '', image: '/eventmanagement/Sharayu.webp', linkedin: 'https://www.linkedin.com/in/sharayu-dange-b536472a8/' },
   // { id: 5, name: 'Unnati Chaudhari', role: 'HR', image: '/eventmanagement/Unnati Chaudhari.webp', linkedin: 'https://www.linkedin.com/in/unnati-chaudhari-871a0632a/' },
   // { id: 6, name: 'Yuvraj Ghungarde', role: 'HR', image: '/eventmanagement/Yuvraj Ghungarde.webp', linkedin: 'https://www.linkedin.com/in/yuvraj-ghungarde-b677b7259/' },
-  { id: 7, name: 'Swaraj Raut', role: 'HR', image: '/eventmanagement/Swaraj Raut.webp', linkedin: 'https://www.linkedin.com/in/swaraj-raut-49647b259/' },
-  { id: 8, name: 'Anish Chincholkar', role: 'HR', image: '/eventmanagement/Anish Chincholkar.webp', linkedin: 'https://www.linkedin.com/in/anish-chincholkar-27534225a/' },
+  { id: 7, name: 'Swaraj Raut', role: '', image: '/eventmanagement/Swaraj Raut.webp', linkedin: 'https://www.linkedin.com/in/swaraj-raut-49647b259/' },
+  { id: 8, name: 'Anish Chincholkar', role: '', image: '/eventmanagement/Anish Chincholkar.webp', linkedin: 'https://www.linkedin.com/in/anish-chincholkar-27534225a/' },
   // { id: 9, name: 'Shubhankar Honap', role: 'HR', image: '/eventmanagement/Shubhankar Honap.webp', linkedin: 'https://www.linkedin.com/in/shubhankar-honap-00b712234/' },
   // { id: 9, name: 'RanjeetSingh Suryavanshi', role: 'HR', image: '/eventmanagement/RanjeetSingh Suryavanshi.webp', linkedin: "" },
   // { id: 9, name: 'Abhishek Wanare', role: 'HR', image: '/eventmanagement/Abhishek Wanare.webp', linkedin: "" },
