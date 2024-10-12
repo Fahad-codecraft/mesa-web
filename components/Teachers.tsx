@@ -85,20 +85,14 @@ export default function Teachers() {
           image="/Hod.webp"
           name="Dr. Pravin. R. Kale"
           position="Professor of Computer Science"
-          description="Dr. Jane Doe is a renowned expert in artificial intelligence and machine learning. 
-            With over 15 years of experience in the field, she has published numerous papers 
-            and led groundbreaking research projects. Her work focuses on developing AI 
-            systems that can understand and generate human language."
+          description=" Dr. P. R. Kale, with 28+ years of teaching and research experience, leads our department with distinction. His expertise in Mechanism, Design, Noise, and Vibration has greatly enriched our academic environment, with his research group focusing on innovative solutions to real-world engineering challenges."
         />
         <hr />
         <FacultyMember
           image="/Faculty_co.webp"
           name="Dr. Varsha Gaikhe"
           position="Associate Professor of Computer Science"
-          description="Dr. John Smith specializes in cybersecurity and network systems. His research 
-            contributes to developing robust security protocols for large-scale networks. 
-            Dr. Smith is also passionate about teaching and mentoring the next generation 
-            of computer scientists."
+          description="With a passion for teaching, I'm driven to comprehend science and technology for community services. I hold a B. Tech in Mechanical Engineering and an M. Tech in Manufacturing Engineering from Dr. BATU, Lonere. At PCCoE, I mentor students to transform their ideas into meaningful work. Explore my work and contributions."
           reverse
         />
       </div>
