@@ -7,9 +7,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 const images = [
   { src: '/pic1.webp', alt: 'Slide 1' },
   { src: '/pic2.webp', alt: 'Slide 2' },
-  { src: '/pic3.webp', alt: 'Slide 3' },
-  { src: '/pic4.webp', alt: 'Slide 4' },
-  { src: '/pic5.webp', alt: 'Slide 5' },
+  // { src: '/pic3.webp', alt: 'Slide 3' },
+  { src: '/pic5.webp', alt: 'Slide 4' },
+  { src: '/pic4.webp', alt: 'Slide 5' },
 ]
 
 export default function Slideshow() {
