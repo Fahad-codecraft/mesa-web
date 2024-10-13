@@ -1,120 +1,154 @@
-"use client";
+'use client';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
-import { useState, useRef, useEffect } from "react";
-import Image from "next/image";
-import { Transition } from "@headlessui/react";
+const testimonials = [
+  {
+    name: 'Prajakta Wagh',
+    role: 'Data Engineer, Amazon',
+    quote: `Thank you for providing a great platform for learning.
+            Recently, Amazon visited our campus, 
+            and I was interviewed by Amazon and got
+            the offer just because of GeeksforGeeks.
+            Thanks a lot.`,
+    image: '/PVPs/Prajakta.webp',
+  },
+  {
+    name: 'Prajakta Wagh',
+    role: 'Data Engineer, Amazon',
+    quote: `Thank you for providing a great platform for learning.
+            Recently, Amazon visited our campus, 
+            and I was interviewed by Amazon and got
+            the offer just because of GeeksforGeeks.
+            Thanks a lot.`,
+    image: '/PVPs/Prajakta.webp',
+  },
+  {
+    name: 'Prajakta Wagh',
+    role: 'Data Engineer, Amazon',
+    quote: `Thank you for providing a great platform for learning.
+            Recently, Amazon visited our campus, 
+            and I was interviewed by Amazon and got
+            the offer just because of GeeksforGeeks.
+            Thanks a lot.`,
+    image: '/PVPs/Prajakta.webp',
+  },
+  {
+    name: 'Prajakta Wagh',
+    role: 'Data Engineer, Amazon',
+    quote: `Thank you for providing a great platform for learning.
+            Recently, Amazon visited our campus, 
+            and I was interviewed by Amazon and got
+            the offer just because of GeeksforGeeks.
+            Thanks a lot.`,
+    image: '/PVPs/Prajakta.webp',
+  },
+];
 
-interface Testimonial {
-  img: string;
-  quote: string;
-  name: string;
-  role: string;
-}
+const TestimonialSlider = () => {
+  const [current, setCurrent] = useState(0);
 
-export default function FancyTestimonialsSlider({
-  testimonials,
-}: {
-  testimonials: Testimonial[];
-}) {
-  const testimonialsRef = useRef<HTMLDivElement>(null);
-  const [active, setActive] = useState<number>(0);
-  const [autorotate, setAutorotate] = useState<boolean>(true);
-  const autorotateTiming: number = 3000;
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % testimonials.length);
+  };
 
-  useEffect(() => {
-    if (!autorotate) return;
-    const interval = setInterval(() => {
-      setActive(
-        active + 1 === testimonials.length ? 0 : (active) => active + 1,
-      );
-    }, autorotateTiming);
-    return () => clearInterval(interval);
-  }, [active, autorotate]);
-
-  const heightFix = () => {
-    if (testimonialsRef.current && testimonialsRef.current.parentElement)
-      testimonialsRef.current.parentElement.style.height = `${testimonialsRef.current.clientHeight}px`;
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
   useEffect(() => {
-    heightFix();
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000); // Change slide every 5 seconds
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="mx-auto w-full max-w-3xl text-center p-5 mb-7">
-      {/* Testimonial image */}
-      <div className="relative h-60 mt-5">
-        <div className="pointer-events-none absolute left-1/2 top-0 h-[480px] w-[480px] -translate-x-1/2 before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-gradient-to-b before:from-indigo-500/25 before:via-indigo-500/5 before:via-25% before:to-indigo-500/0 before:to-75%">
-          <div className="h-60">
-            {testimonials.map((testimonial, index) => (
-              <Transition
-                as="div"
-                key={index}
-                show={active === index}
-                className="absolute inset-0 -z-10 h-full"
-                enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first"
-                enterFrom="opacity-0 -rotate-[60deg]"
-                enterTo="opacity-100 rotate-0"
-                leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700"
-                leaveFrom="opacity-100 rotate-0"
-                leaveTo="opacity-0 rotate-[60deg]"
-                beforeEnter={() => heightFix()}
-              >
-                <Image
-                  className="relative left-1/2 top-11 -translate-x-1/2 rounded-full"
-                  src={testimonial.img}
-                  width={200}
-                  height={200}
-                  alt={testimonial.name}
-                />
-              </Transition>
-            ))}
-          </div>
+    <div className="relative w-full max-w-4xl mx-auto pb-10 p-6 rounded-lg shadow-lg">
+      <div className="overflow-hidden">
+        <div className="flex transition-transform 
+                        duration-700 ease-in-out"
+          style={{ transform: `translateX(-${current * 100}%)` }}>
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="flex-shrink-0 w-full p-8">
+              <div className="bg-[#27292B]
+                              shadow-lg rounded-lg 
+                              hover:shadow-2xl transition-shadow
+                              duration-300 p-6">
+                <div className="flex justify-center mb-4">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    width={80}
+                    height={80}
+                    className="w-20 h-20 rounded-full"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-center text-white">{testimonial.name}</h3>
+                <p className="text-center text-sm font-semibold text-gray-500">
+                  <span className="text-green-600">{testimonial.role}</span>
+                </p>
+                <div className="mt-4 text-gray-300 text-center italic">
+                  <p className="max-w-xs mx-auto">{testimonial.quote}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      {/* Text */}
-      <div className="mb-9 transition-all delay-300 duration-150 ease-in-out min-h-[100px]">
-  <div className="relative flex flex-col" ref={testimonialsRef}>
-    {testimonials.map((testimonial, index) => (
-      <Transition
-        key={index}
-        show={active === index}
-        enter="transition ease-in-out duration-500 delay-200 order-first"
-        enterFrom="opacity-0 -translate-x-4"
-        enterTo="opacity-100 translate-x-0"
-        leave="transition ease-out duration-300 delay-300 absolute"
-        leaveFrom="opacity-100 translate-x-0"
-        leaveTo="opacity-0 translate-x-4"
-        beforeEnter={() => heightFix()}
-      >
-        <div className="text-2xl font-bold text-white before:content-['\201C'] after:content-['\201D']">
-          {testimonial.quote}
-        </div>
-      </Transition>
-    ))}
-  </div>
-</div>
-      {/* Buttons */}
-      <div className="-m-1.5 flex flex-wrap justify-center">
-        {testimonials.map((testimonial, index) => (
+
+      {/* Dots for navigation */}
+      <div className="flex justify-center space-x-2 mt-4">
+        {testimonials.map((_, index) => (
           <button
             key={index}
-            className={`m-1.5 inline-flex justify-center whitespace-nowrap rounded-full px-3 py-1.5 text-xs shadow-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 ${active === index ? "bg-indigo-500 text-white shadow-indigo-950/10" : "bg-white text-slate-900 hover:bg-indigo-100"}`}
-            onClick={() => {
-              setActive(index);
-              setAutorotate(false);
-            }}
-          >
-            <span>{testimonial.name}</span>{" "}
-            <span
-              className={`${active === index ? "text-indigo-200" : "text-slate-300"}`}
-            >
-              -
-            </span>{" "}
-            <span>{testimonial.role}</span>
-          </button>
+            className={`h-2 w-2 rounded-full ${current === index ? 'bg-green-600' : 'bg-gray-300'} transition-all duration-300`}
+            onClick={() => setCurrent(index)}
+          />
         ))}
+      </div>
+
+      {/* Previous button */}
+      <div className="absolute top-1/2 left-0 transform -translate-y-1/2">
+        <button
+          className="p-2 bg-green-500 hover:bg-green-600 text-white rounded-full transition-colors duration-300"
+          onClick={prevSlide}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Next button */}
+      <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
+        <button
+          className="p-2 bg-green-500 hover:bg-green-600 text-white rounded-full transition-colors duration-300"
+          onClick={nextSlide}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
     </div>
   );
-}
+};
+
+export default TestimonialSlider;
