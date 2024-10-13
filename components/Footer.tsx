@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube,  } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -46,17 +46,14 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Social Media</h3>
             <div className="flex space-x-4">
-              <Link href="/" aria-label="Instagram">
+              <Link href="https://www.instagram.com/mesa_pccoe" aria-label="Instagram">
                 <Instagram className="w-6 h-6 hover:text-primary transition-colors" />
               </Link>
-              <Link href="/" aria-label="LinkedIn">
+              <Link href="https://www.linkedin.com/company/pccoe-mesa/" aria-label="LinkedIn">
                 <Linkedin className="w-6 h-6 hover:text-primary transition-colors" />
               </Link>
-              <Link href="/" aria-label="YouTube">
+              <Link href="https://www.youtube.com/@MESA_PCCOE" aria-label="YouTube">
                 <Youtube className="w-6 h-6 hover:text-primary transition-colors" />
-              </Link>
-              <Link href="/" aria-label="Facebook">
-                <Facebook className="w-6 h-6 hover:text-primary transition-colors" />
               </Link>
             </div>
           </div>
