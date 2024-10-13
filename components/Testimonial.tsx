@@ -6,7 +6,7 @@ const testimonials = [
   {
     name: 'Shreyash Mogaveera',
     role: '2023-24',
-    quote: `As  President of MESA, I had the privilege of leading a passionate and determined team, which helped me strengthened my ability to face challenges.`,
+    quote: `As  President of MESA, I had the privilege to lead a team full of individuals with thirst for excellence and unwavering determination.`,
     image: '/ex/shreyash.webp',
   },
   {
