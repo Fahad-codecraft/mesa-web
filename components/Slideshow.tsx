@@ -44,13 +44,11 @@ export default function Slideshow() {
   }
 
   useEffect(() => {
-    if (!isMobile) {
-      const interval = setInterval(() => {
-        nextSlide()
-      }, 3000)
+    const interval = setInterval(() => {
+      nextSlide()
+    }, 3000)
 
-      return () => clearInterval(interval)
-    }
+    return () => clearInterval(interval)
   }, [currentIndex, isMobile])
 
   return (
