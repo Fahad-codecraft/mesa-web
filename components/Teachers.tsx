@@ -84,14 +84,14 @@ export default function Teachers() {
         <FacultyMember
           image="/Hod.webp"
           name="Dr. Pravin. R. Kale"
-          position="Professor of Computer Science"
+          position="Head Of Department"
           description=" Dr. P. R. Kale, with 28+ years of teaching and research experience, leads our department with distinction. His expertise in Mechanism, Design, Noise, and Vibration has greatly enriched our academic environment, with his research group focusing on innovative solutions to real-world engineering challenges."
         />
         <hr />
         <FacultyMember
           image="/Faculty_co.webp"
           name="Dr. Varsha Gaikhe"
-          position="Associate Professor of Computer Science"
+          position="Faculty Co-ordinator"
           description="With a passion for teaching, I'm driven to comprehend science and technology for community services. I hold a B. Tech in Mechanical Engineering and an M. Tech in Manufacturing Engineering from Dr. BATU, Lonere. At PCCoE, I mentor students to transform their ideas into meaningful work. Explore my work and contributions."
           reverse
         />
