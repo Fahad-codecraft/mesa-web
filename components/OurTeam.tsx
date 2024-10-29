@@ -41,7 +41,7 @@ export default function MeetOurTeam() {
             <div 
               key={member.name} 
               className={`flex flex-col items-center ${
-                index === 1 ? 'sm:order-2' : index === 0 ? 'sm:order-1' : 'sm:order-3'
+                index === 1 ? 'order-1 sm:order-2' : index === 0 ? 'order-2 sm:order-1' : 'order-3 sm:order-3'
               }`}
             >
               <div className="relative w-60 h-60 mb-4">
@@ -50,7 +50,6 @@ export default function MeetOurTeam() {
                   alt={member.name}
                   fill
                   className="object-cover rounded-full hover:scale-105 transition-all duration-500"
-
                 />
               </div>
               <h3 className="text-lg font-semibold text-gray-100">{member.name}</h3>

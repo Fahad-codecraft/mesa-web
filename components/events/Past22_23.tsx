@@ -20,7 +20,7 @@ const Past22_23 = () => {
         <CommonPast 
         title='Chakravyuh'
         description={`The Sports fest Chakravyuh organized by team mesa with different sports competition like cricket, football, badminton and chess. The event was conducted with great enthusiasm and teamspirit`}
-        image='/2022-23/Chakravyuh.webp'
+        image='/2022-23/chakravyuh.webp'
         />
       ),
     },
