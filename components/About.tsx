@@ -21,7 +21,7 @@ const likethis = [
 const teamDirectors = [
   { id: 1, name: 'Sujal Hanji', role: 'Social Media Head', image: '/teamDirectors/Sujal Hanji.webp', linkedin: 'https://www.linkedin.com/in/sujal-hanji-591b59284/' },
   { id: 2, name: 'Rajvardhan Kadam', role: 'Marketing Head', image: '/teamDirectors/Rajwardhan Kadam.webp', linkedin: 'https://www.linkedin.com/in/rajvardhan-kadam-23a838284/' },
-  { id: 3, name: 'Siddhi Tiwari', role: 'Event Management Head', image: '/teamDirectors/Siddhi.webp', linkedin: 'https://www.linkedin.com/in/siddhitiwari/' },
+  { id: 3, name: 'Siddhi Tiwari', role: 'Event Management Head', image: '/teamDirectors/siddhi.webp', linkedin: 'https://www.linkedin.com/in/siddhitiwari/' },
 ]
 
 const socialmedia = [
@@ -61,7 +61,7 @@ const eventmanagement = [
 ]
 
 const cellHeads = [
-  { id: 3, name: 'Samiksha Koli', role: 'Cultural and Social Activity', image: '/cellHeads/Samiksha.webp  ', linkedin: 'https://www.linkedin.com/in/samiksha-koli-0ba47726b/' },
+  { id: 3, name: 'Samiksha Koli', role: 'Cultural and Social Activity', image: '/cellHeads/Samiksha.webp', linkedin: 'https://www.linkedin.com/in/samiksha-koli-0ba47726b/' },
   { id: 6, name: 'Aditi Mane', role: 'Society of Women Engineering Head', image: '/cellHeads/Aditi.webp', linkedin: '' },
   { id: 7, name: 'Atharva Wankar', role: 'Institute of Social Responsibility Head', image: '/cellHeads/Atharva Wankar.webp', linkedin: 'https://www.linkedin.com/in/atharva-wankar-022815259/' },
   { id: 8, name: 'Devraj Patil', role: 'Entrepreneurship and Higher study Head', image: '/cellHeads/Devraj.webp', linkedin: 'https://www.linkedin.com/in/devraj-patil-b513b022b/' },
