@@ -13,7 +13,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Shriram Nimbalkar",
     title: "Vice President",
-    image: "/PVPs/Shriram.webp",
+    image: "/PVPs/Shriram.jpg",
     linkedin: "https://www.linkedin.com/in/shriram-nimbalkar-a411a0240"
   },
   {
@@ -24,8 +24,8 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Shravani Mahajan",
-    title: "Vice President of Marketing",
-    image: "/PVPs/Shravani Mahajan.webp",
+    title: "Vice President",
+    image: "/PVPs/Shravani M.jpg",
     linkedin: "https://www.linkedin.com/in/shravani-mahajan-1b4b26272"
   }
 ]
