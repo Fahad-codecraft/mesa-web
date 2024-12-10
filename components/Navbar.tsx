@@ -10,12 +10,12 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { 
-    name: "Past Events", 
-    href: "/past-events",
+    name: "Events", 
+    href: "",
     subItems: [
-      { name: "2022-23", href: "/past-events/2022-23" },
-      { name: "2021-22", href: "/past-events/2021-22" },
-      { name: "2020-21", href: "/past-events/2020-21" },
+      { name: "Upcoming Events", href: "/upcoming-events" },
+      { name: "Past Events", href: "/past-events" },
+      // { name: "2020-21", href: "/past-events/2020-21" },
     ]
   },
   { name: "Contact", href: "/contact" },
@@ -75,7 +75,7 @@ export default function Navbar() {
                 {/* Dropdown for "Past Events" */}
                 {item.subItems && isHovered && (
                   <motion.div
-                    className="absolute top-full left-0 mt-2 w-40 bg-black shadow-lg rounded-md"
+                    className="absolute top-full left-0 mt-2 w-44 bg-black rounded"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
