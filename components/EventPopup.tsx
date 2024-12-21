@@ -39,7 +39,7 @@ export function EventPopup() {
         </DialogHeader>
         <div className="flex flex-col items-center space-y-4">
           <Image
-            src="/upcoming/firestorm.webp"
+            src="/upcoming/firestorm_small.webp"
             alt={`Poster for firestorm event`}
             width={200}
             height={125}
