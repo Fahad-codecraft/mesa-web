@@ -1,3 +1,4 @@
+import { EventPopup } from "@/components/EventPopup";
 import Footer from "@/components/Footer";
 import MeetOurTeam from "@/components/OurTeam";
 import Slideshow from "@/components/Slideshow";
@@ -12,6 +13,7 @@ export default function Home() {
       <MeetOurTeam />
       <TestimonialSlider />
       <Footer />
+      <EventPopup />
     </div>
   );
 }
