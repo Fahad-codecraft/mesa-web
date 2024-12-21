@@ -8,11 +8,12 @@ import { Badge } from "@/components/ui/badge"
 import { Modal } from "@/components/ui/modal"
 import { XCircle, AlertTriangle } from 'lucide-react'
 
+
 const events = [
   {
     id: 1,
     title: "Firestorm Event",
-    date: "2024-06-15",
+    date: "26-12-2024",
     isFinished: false,
     isRegistrationClosed: false,
     poster: "/upcoming/firestorm.webp",
@@ -156,7 +157,6 @@ function EventCard({ event }: {
             height={300}
             className="w-full h-auto mb-4 rounded-md"
           />
-          
           <h3 className="text-xl font-semibold">Rules:</h3>
           <p className="whitespace-pre-line">{event.rules}</p>
         </div>
@@ -168,7 +168,7 @@ function EventCard({ event }: {
 export default function EventsPage() {
   return (
     <div className="container mx-auto px-4 py-8 mt-16">
-      <h1 className="text-3xl font-bold mb-6">Upcoming Events</h1>
+      <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-6 text-center">Upcoming Events</h1>
       <div className="flex justify-center">
         {events.map((event) => (
           <EventCard key={event.id} event={event} />
