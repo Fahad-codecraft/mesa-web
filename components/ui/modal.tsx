@@ -46,7 +46,7 @@ export function Modal({ isOpen, onClose, children }:
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-auto"
           >
-            <div className="bg-black text-white rounded-lg shadow-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-black text-white rounded-lg shadow-lg max-w-md w-full max-h-[90vh] overflow-y-auto border-2 scrollbar-hide">
               <div className="sticky top-0 flex justify-end p-2 z-10">
                 <Button variant="ghost" size="icon" onClick={onClose}>
                   <X className="h-6 w-6 bg-white text-black rounded-full" />

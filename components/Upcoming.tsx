@@ -7,6 +7,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Badge } from "@/components/ui/badge"
 import { Modal } from "@/components/ui/modal"
 import { XCircle, AlertTriangle } from 'lucide-react'
+import ReactMarkdown from 'react-markdown'
 
 
 const events = [
@@ -17,9 +18,14 @@ const events = [
     isFinished: false,
     isRegistrationClosed: false,
     poster: "/upcoming/firestorm.webp",
-    rules: `1. All attendees must register in advance.
-    2. Bring your own laptop.
-    3. Be respectful to speakers and other attendees.`,
+    rules: `1.**Team Composition**: Each team must have 4 main players and up to 2 substitutes, with all members at a minimum account level of 30.
+2. **Match Format**: Matches will follow BGMI TPP format. Maps include Erangel, Sanhok, Miramar, and Vikendi.
+3. **Match Timing**: Teams must join the lobby 15 minutes early. Matches start at 12 PM sharp; latecomers will not be allowed.
+4. **Substitution**: Substitutes can be used only between matches.
+5. **Code of Conduct**: Cheating, hacking, and disrespectful behavior will result in immediate disqualification.
+6. **Match Reporting**: Report technical issues or disputes immediately after the match. Keep death replays enabled for evidence.
+7. **Scoring**: The scoring system will be shared before the tournament. The team with the highest points will be the winner.
+8. **Compliance**: All teams must follow the rules, and tournament officials' decisions are final.`,
   },
 ]
 
@@ -158,7 +164,7 @@ function EventCard({ event }: {
             className="w-full h-auto mb-4 rounded-md"
           />
           <h3 className="text-xl font-semibold">Rules:</h3>
-          <p className="whitespace-pre-line">{event.rules}</p>
+          <ReactMarkdown className="whitespace-pre-line">{event.rules}</ReactMarkdown>
         </div>
       </Modal>
     </>
