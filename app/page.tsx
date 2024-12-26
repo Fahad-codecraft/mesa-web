@@ -13,7 +13,7 @@ export default function Home() {
       <MeetOurTeam />
       <TestimonialSlider />
       <Footer />
-      <EventPopup />
+      {/* <EventPopup /> */}
     </div>
   );
 }

@@ -16,7 +16,7 @@ const events = [
     title: "Firestorm Event",
     date: "26-12-2024",
     isFinished: false,
-    isRegistrationClosed: false,
+    isRegistrationClosed: true,
     poster: "/upcoming/firestorm.webp",
     rules: `1.**Team Composition**: Each team must have 4 main players and up to 2 substitutes, with all members at a minimum account level of 30.
 2. **Match Format**: Matches will follow BGMI TPP format. Maps include Erangel, Sanhok, Miramar, and Vikendi.
