@@ -15,7 +15,9 @@ const config: Config = {
 		extend: {
 			animation: {
         shimmer: "shimmer 2s linear infinite",
+				aurora: "aurora 60s linear infinite",
       },
+
       keyframes: {
         shimmer: {
           from: {
@@ -23,6 +25,14 @@ const config: Config = {
           },
           to: {
             backgroundPosition: "-200% 0",
+          },
+        },
+				aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
           },
         },
       },
