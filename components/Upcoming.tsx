@@ -54,7 +54,7 @@ function EventCard({ event, onOpenModal }: {
 
   const handleRegisterClick = (e: React.MouseEvent) => {
     e.stopPropagation()
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLSd8f3GrwLbeSHZ5cZF1HNEXjdILUiZAOUqbfYk8p35XhGzPYg/viewform?usp=dialog', '_blank', 'noopener,noreferrer')
+    window.open('https://docs.google.com/forms/d/19RrIlCgttPpaP2fTPC-9FmmMzzGTo6f5w6kB0pf3T18', '_blank', 'noopener,noreferrer')
   }
 
   return (
