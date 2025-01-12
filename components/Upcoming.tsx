@@ -20,10 +20,9 @@ const events = [
     isRegistrationClosed: false,
     poster: "/upcoming/Champions.webp",
     formLink: "https://docs.google.com/forms/d/19RrIlCgttPpaP2fTPC-9FmmMzzGTo6f5w6kB0pf3T18",
-    rules: `1. League Stage: 7 Overs Matches
-  2. Semi-finals & Finals: 10 Overs Matches
-  3. Eligibility: 
-  Only students from the Same Year, Same Department can participate in this tournament.
+    rules: `1. **League Stage**: 7 Overs Matches
+  2. **Semi-finals & Finals**: 10 Overs Matches
+  3. **Eligibility**: Only students from the Same Year, Same Department can participate in this tournament.
   Team Registration: Register your full team of 7 players , 3 Sub (optional)`,
   },
 ]
@@ -184,10 +183,10 @@ export default function EventsPage() {
       </div>
       {events.map((event) => (
         <Modal key={event.id} isOpen={openModalId === event.id} onClose={handleCloseModal}>
-          <div className="space-y-4">
+          <div className="space-y-2">
             <div className="flex flex-row justify-between items-center mb-4">
               <h2 className="text-2xl font-bold">{event.title}</h2>
-              <div className="flex justify-end mt-4">
+              <div className="flex justify-end">
                 {!event.isFinished && !event.isRegistrationClosed ? (
                   <Button
                     variant="outline"

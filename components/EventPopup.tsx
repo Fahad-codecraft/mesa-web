@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import { X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -25,7 +24,7 @@ export function EventPopup() {
 
   const handleRegisterClick = (e: React.MouseEvent) => {
     e.stopPropagation()
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLSd8f3GrwLbeSHZ5cZF1HNEXjdILUiZAOUqbfYk8p35XhGzPYg/viewform?usp=dialog', '_blank', 'noopener,noreferrer')
+    window.open('/upcoming-events/#champions-league', '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -34,18 +33,19 @@ export function EventPopup() {
         <DialogHeader>
           <DialogTitle className='text-3xl text-center'>Upcoming Event!</DialogTitle>
           <DialogDescription className='text-center'>
-            Join us for an exciting event Firestorm
+            Join us for an exciting event Champions Cricket Tournament
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col items-center space-y-4">
           <Image
-            src="/upcoming/firestorm_small.webp"
+            src="/upcoming/Champions-small.webp"
             alt={`Poster for firestorm event`}
             width={200}
             height={125}
             className="mb-4 rounded-md"
           />
-          <p>Date: Dec 26, 2024</p>
+          <p>Date: Jan 18, 2025</p>
+          <p>Prize Pool: 12K</p>
           {/* <p>Time: 2:00 PM EST</p> */}
           <Button
             variant="outline"
