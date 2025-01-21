@@ -16,8 +16,8 @@ const events = [
     id: 1,
     title: "Champions League",
     date: "18-01-2025",
-    isFinished: false,
-    isRegistrationClosed: false,
+    isFinished: true,
+    isRegistrationClosed: true,
     poster: "/upcoming/Champions.webp",
     formLink: "https://docs.google.com/forms/d/19RrIlCgttPpaP2fTPC-9FmmMzzGTo6f5w6kB0pf3T18",
     rules: `1. **League Stage**: 7 Overs Matches
