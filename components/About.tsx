@@ -40,10 +40,8 @@ const marketing = [
   { id: 7, name: 'Rushikesh Jagdale', role: ' ', image: '/marketing/Rushikesh.webp', linkedin: '' },
   { id: 8, name: 'Piyush Kharat', role: '', image: '/marketing/Piyush Kharat.webp', linkedin: 'https://www.linkedin.com/in/piyush-kharat-8b8784259/' },
   { id: 9, name: 'Prasad Gadekar', role: '', image: '/marketing/Prasad.webp', linkedin: 'https://www.linkedin.com/in/prasad-gadekar-3a6160253/' },
-  { id: 2, name: 'Aarya Deshpande', role: '', image: '/marketing/Arya.webp', linkedin: '' },
-  { id: 3, name: 'Aditya Patil', role: '', image: '/marketing/Aditya.webp', linkedin: '' },
-  // { id: 4, name: 'Ayog Kewate', role: 'Developer', image: '/marketing/Ayog.webp', linkedin: '' },
-  { id: 5, name: 'Ritika Jadhav', role: '', image: '/marketing/Ritika.webp', linkedin: 'https://www.linkedin.com/in/ritika-jadhav-a894ba274/' },
+  // { id: 2, name: 'Aarya Deshpande', role: '', image: '/marketing/Arya.webp', linkedin: '' },
+  // { id: 3, name: 'Aditya Patil', role: '', image: '/marketing/Aditya.webp', linkedin: '' },
 ]
 
 const eventmanagement = [
@@ -54,10 +52,10 @@ const eventmanagement = [
   { id: 6, name: 'Yuvraj Ghungarde', role: '', image: '/eventmanagement/Yuvraj.webp', linkedin: 'https://www.linkedin.com/in/yuvraj-ghungarde-b677b7259/' },
   { id: 7, name: 'Swaraj Raut', role: '', image: '/eventmanagement/Swaraj Raut.webp', linkedin: 'https://www.linkedin.com/in/swaraj-raut-49647b259/' },
   { id: 8, name: 'Anish Chincholkar', role: '', image: '/eventmanagement/anish.webp', linkedin: 'https://www.linkedin.com/in/anish-chincholkar-27534225a/' },
-  // { id: 9, name: 'Shubhankar Honap', role: 'HR', image: '/eventmanagement/Shubhankar Honap.webp', linkedin: 'https://www.linkedin.com/in/shubhankar-honap-00b712234/' },
   // { id: 9, name: 'RanjeetSingh Suryavanshi', role: 'HR', image: '/eventmanagement/RanjeetSingh Suryavanshi.webp', linkedin: "" },
-  { id: 10, name: 'Anushka Boithe', role: '', image: '/eventmanagement/Anushka.webp', linkedin: "" },
-  { id: 9, name: 'Abhishek Wanare', role: '', image: '/eventmanagement/abhishek.webp', linkedin: "" },
+  { id: 10, name: 'Anushka Bhoite', role: '', image: '/eventmanagement/Anushka.webp', linkedin: "" },
+  { id: 11, name: 'Shitija Sonawane', role: '', image: '/eventmanagement/Kshitija.webp', linkedin: "" },
+  // { id: 9, name: 'Abhishek Wanare', role: '', image: '/eventmanagement/abhishek.webp', linkedin: "" },
 ]
 
 const cellHeads = [
@@ -83,6 +81,12 @@ const websiteteam = [
   { id: 2, name: 'Soham Desai', role: '', image: '/website/Soham.webp', linkedin: 'https://www.linkedin.com/in/soham-desai-991a4821b/' },
 ]
 
+
+const outside = [
+  { id: 9, name: 'Abhishek Wanare', role: '', image: '/eventmanagement/abhishek.webp', linkedin: "" },
+  { id: 2, name: 'Aarya Deshpande', role: '', image: '/marketing/Arya.webp', linkedin: '' },
+  { id: 3, name: 'Aditya Patil', role: '', image: '/marketing/Aditya.webp', linkedin: '' },
+]
 
 // Reusable TeamMember component
 interface TeamMemberProps {
@@ -187,6 +191,12 @@ export default function About() {
             <TeamMember key={member.id} member={member} index={index} />
           ))}
         </div>
+        {/* For members to do center */}
+        <div className='gap-8 mt-8 max-w-full flex '>
+          <TeamMember key={outside[1].id} member={outside[1]} index={1} />
+          <TeamMember key={outside[2].id} member={outside[2]} index={2} />
+        </div>
+
       </div>
       <div className='flex flex-col justify-center items-center'>
         <h1 className='text-xl lg:text-5xl font-bold my-12 text-center'>Event Management Team</h1>
@@ -194,6 +204,10 @@ export default function About() {
           {eventmanagement.map((member, index) => (
             <TeamMember key={member.id} member={member} index={index} />
           ))}
+        </div>
+        {/* For members to do center */}
+        <div className='gap-8 mt-8 max-w-full flex'>
+          <TeamMember key={outside[0].id} member={outside[0]} index={0} />
         </div>
       </div>
 
