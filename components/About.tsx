@@ -54,7 +54,7 @@ const eventmanagement = [
   { id: 8, name: 'Anish Chincholkar', role: '', image: '/eventmanagement/anish.webp', linkedin: 'https://www.linkedin.com/in/anish-chincholkar-27534225a/' },
   // { id: 9, name: 'RanjeetSingh Suryavanshi', role: 'HR', image: '/eventmanagement/RanjeetSingh Suryavanshi.webp', linkedin: "" },
   { id: 10, name: 'Anushka Bhoite', role: '', image: '/eventmanagement/Anushka.webp', linkedin: "" },
-  { id: 11, name: 'Shitija Sonawane', role: '', image: '/eventmanagement/Kshitija.webp', linkedin: "" },
+  { id: 11, name: 'Shitija Sonawane', role: '', image: '/eventmanagement/kshitija.webp', linkedin: "" },
   // { id: 9, name: 'Abhishek Wanare', role: '', image: '/eventmanagement/abhishek.webp', linkedin: "" },
 ]
 
