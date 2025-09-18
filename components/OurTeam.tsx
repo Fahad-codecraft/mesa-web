@@ -11,22 +11,22 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Shriram Nimbalkar",
+    name: "Aditya Patil",
     title: "Vice President",
-    image: "/PVPs/Shriram.jpg",
-    linkedin: "https://www.linkedin.com/in/shriram-nimbalkar-a411a0240"
+    image: "/coreteam/Aditya.webp",
+    linkedin: ""
   },
   {
-    name: "Prajakta Wagh",
+    name: "Ashay Jambhorkar",
     title: "President",
-    image: "/PVPs/Prajakta.webp",
-    linkedin: "https://www.linkedin.com/in/prajakta-wagh-0388b3259"
+    image: "/coreteam/Ashay.webp",
+    linkedin: ""
   },
   {
-    name: "Shravani Mahajan",
+    name: "Simran Dandge",
     title: "Vice President",
-    image: "/PVPs/Shravani M.jpg",
-    linkedin: "https://www.linkedin.com/in/shravani-mahajan-1b4b26272"
+    image: "/coreteam/Simran.webp",
+    linkedin: ""
   }
 ]
 
@@ -54,7 +54,7 @@ export default function MeetOurTeam() {
               </div>
               <h3 className="text-lg font-semibold text-gray-100">{member.name}</h3>
               <p className="text-sm text-gray-300 mb-2">{member.title}</p>
-              <Link 
+              {/* <Link 
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -62,7 +62,7 @@ export default function MeetOurTeam() {
               >
                 <Linkedin className="w-6 h-6" />
                 <span className="sr-only">LinkedIn profile of {member.name}</span>
-              </Link>
+              </Link> */}
             </div>
           ))}
         </div>
