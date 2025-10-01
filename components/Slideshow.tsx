@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const images = [
-  { src: '/pic1.webp', alt: 'Slide 1' },
+  { src: '/coreteam/pic1.webp', alt: 'Slide 1' },
   { src: '/pic2.webp', alt: 'Slide 2' },
   // { src: '/pic3.webp', alt: 'Slide 3' },
   { src: '/pic5.webp', alt: 'Slide 4' },

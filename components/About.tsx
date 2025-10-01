@@ -9,12 +9,12 @@ import { Linkedin } from 'lucide-react'
 const PVP = [
   { id: 1, name: 'Ashay Jambhorkar ', role: 'President', image: '/coreteam/Ashay.webp', linkedin: '' },
   { id: 2, name: 'Aditya Patil', role: 'Vice-President', image: '/coreteam/Aditya.webp', linkedin: '' },
-  { id: 3, name: 'Simran Dandge', role: 'Female Representative', image: '/coreteam/simran.webp', linkedin: '' },
+  { id: 3, name: 'Simran Dandge', role: 'Female Representative', image: '/coreteam/Simran.webp', linkedin: '' },
 ]
 
 const likethis = [
   { id: 4, name: 'Fahad Devnikar', role: 'HRM', image: '/coreteam/Fahad.webp', linkedin: '' },
-  { id: 5, name: 'Abhishek Wanare', role: 'Treasurer', image: '/coreteam/abhishek.webp', linkedin: '' },
+  { id: 5, name: 'Abhishek Wanare', role: 'Treasurer', image: '/coreteam/Abhishek.webp', linkedin: '' },
 ]
 
 const domainHeads = [
